@@ -7,8 +7,9 @@ const middlewares = require("./middlewares/middlewares");
 require('dotenv').config();
 
 // mongoose connection
-let connectionString=`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0-z5xed.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`
+let connectionString=`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0-8yki5.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`
 require("./routes/routes")(app)
+console.log(connectionString)
 
 app.use(middlewares.incorrectRoutes);
 
