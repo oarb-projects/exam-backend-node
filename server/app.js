@@ -10,17 +10,6 @@ const middlewares = require("./middlewares/middlewares");
 // mongoose
 const mongoose = require('mongoose');
 // MongoClient = require('mongodb').MongoClient;
-// dotenv
-let envpath=path.join(__dirname,'../.env')
-console.log(envpath)
-const result=require('dotenv').config({path:envpath})
-if (result.error) {
-    throw result.error
-}
-console.log(result.parsed)
-// mongodb+srv://<username>:<password>@cluster0-8yki5.mongodb.net/<dbname>?retryWrites=true&w=majority
-// let connectionString=`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0-8yki5.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`
-// mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0-xiaj2.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority
 let connectionString=`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0-xiaj2.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`
 
 /* ==============basic app config==================*/
